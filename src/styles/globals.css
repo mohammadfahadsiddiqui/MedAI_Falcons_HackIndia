@@ -70,14 +70,44 @@
     --bg-input: #f1f5f9;
     --bg-sidebar: #ffffff;
     --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
     --border: rgba(0, 0, 0, 0.08);
     --border-active: rgba(99, 102, 241, 0.4);
     --glass-bg: rgba(255, 255, 255, 0.7);
     --glass-border: rgba(99, 102, 241, 0.15);
     --shadow-md: 0 4px 20px rgba(99, 102, 241, 0.1);
     --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.15);
+}
+
+/* Badge — light mode readable colors */
+.light .badge-success {
+    color: #16a34a;
+}
+
+.light .badge-warning {
+    color: #d97706;
+}
+
+.light .badge-danger {
+    color: #dc2626;
+}
+
+.light .badge-cyan {
+    color: #0891b2;
+}
+
+.light .badge-primary {
+    color: #4f46e5;
+}
+
+/* Chip — light mode */
+.light .chip {
+    color: #334155;
+}
+
+.light .chip:hover {
+    color: #4f46e5;
 }
 
 /* ---------- Reset & base ---------- */
