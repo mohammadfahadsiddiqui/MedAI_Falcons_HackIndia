@@ -49,8 +49,8 @@ const AIInsights: React.FC = () => (
                 <ResponsiveContainer width="100%" height={220}>
                     <BarChart data={weeklyBar} margin={{ left: -20 }}>
                         <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                        <XAxis dataKey="week" tick={{ fontSize: 11, fill: 'var(--text-muted)' }} axisLine={false} tickLine={false} />
-                        <YAxis tick={{ fontSize: 11, fill: 'var(--text-muted)' }} axisLine={false} tickLine={false} domain={[60, 100]} />
+                        <XAxis dataKey="week" tick={{ fontSize: 11, fill: '#64748b' }} axisLine={false} tickLine={false} />
+                        <YAxis tick={{ fontSize: 11, fill: '#64748b' }} axisLine={false} tickLine={false} domain={[60, 100]} />
                         <Tooltip contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 10, fontSize: 12 }} />
                         <Bar dataKey="score" fill="#6366f1" radius={[6, 6, 0, 0]} />
                     </BarChart>
