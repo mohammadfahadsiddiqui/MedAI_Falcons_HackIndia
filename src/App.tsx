@@ -29,6 +29,8 @@ import Orders from './pages/Pharmacy/Orders';
 import DosageCalculator from './pages/Tools/DosageCalculator';
 import LabTests from './pages/LabTests/LabTests';
 import PrescriptionUpload from './pages/Prescription/PrescriptionUpload';
+
+// 2026 AI Feature Pages
 import HealthTwin from './pages/HealthTwin/HealthTwin';
 import MentalHealth from './pages/MentalHealth/MentalHealth';
 import DoctorDashboard from './pages/DoctorDashboard/DoctorDashboard';
@@ -91,6 +93,13 @@ const App: React.FC = () => {
                     <Route path="/dosage-calculator" element={<DosageCalculator />} />
                     <Route path="/lab-tests" element={<LabTests />} />
                     <Route path="/prescriptions" element={<PrescriptionUpload />} />
+                    {/* ── 2026 AI Features ───────────────────── */}
+                    <Route path="/health-twin" element={<HealthTwin />} />
+                    <Route path="/mental-health" element={<MentalHealth />} />
+                    <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
+                    <Route path="/second-opinion" element={<SecondOpinion />} />
+                    <Route path="/family-vault" element={<FamilyVault />} />
+                    <Route path="/medications" element={<Medications />} />
                   </Routes>
                 </DashboardLayout>
               </ProtectedRoute>
