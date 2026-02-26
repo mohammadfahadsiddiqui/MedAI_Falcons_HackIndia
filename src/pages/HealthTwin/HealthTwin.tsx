@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Heart, Activity, Zap, AlertTriangle, CheckCircle, RefreshCw, ChevronRight } from 'lucide-react';
+import { Brain, Zap, CheckCircle, RefreshCw, ChevronRight } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 interface RiskReport {

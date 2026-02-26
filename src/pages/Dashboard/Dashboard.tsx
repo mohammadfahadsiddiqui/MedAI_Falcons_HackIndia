@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
     Activity, Heart, Droplets, Moon, Flame, TrendingUp,
@@ -39,7 +39,7 @@ interface StatCardProps {
     delay?: number;
 }
 
-const StatCard: React.FC<StatCardProps> = ({ icon: Icon, label, value, unit, trend, color, bgGradient, delay = 0 }) => (
+const StatCard: React.FC<StatCardProps> = ({ icon: Icon, label, value, unit, trend, bgGradient, delay = 0 }) => (
     <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

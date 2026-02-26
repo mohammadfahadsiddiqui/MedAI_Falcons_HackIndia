@@ -107,8 +107,8 @@ const MentalHealth: React.FC = () => {
                                 <ResponsiveContainer width="100%" height={200}>
                                     <LineChart data={trendSeed}>
                                         <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                                        <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#64748b' } as React.CSSProperties} axisLine={false} tickLine={false} />
-                                        <YAxis domain={[1, 7]} tick={{ fontSize: 11, fill: '#64748b' } as React.CSSProperties} axisLine={false} tickLine={false} />
+                                        <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#64748b' } as any} axisLine={false} tickLine={false} />
+                                        <YAxis domain={[1, 7]} tick={{ fontSize: 11, fill: '#64748b' } as any} axisLine={false} tickLine={false} />
                                         <Tooltip contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 10, fontSize: 12 }} />
                                         <Line type="monotone" dataKey="mood" stroke="#8b5cf6" strokeWidth={2.5} dot={{ r: 4, fill: '#8b5cf6' }} name="Mood" />
                                         <Line type="monotone" dataKey="energy" stroke="#06b6d4" strokeWidth={2} dot={{ r: 3, fill: '#06b6d4' }} name="Energy" />

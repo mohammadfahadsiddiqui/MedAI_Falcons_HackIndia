@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-    Bot, Send, User, Paperclip, Mic, MicOff, Volume2, VolumeX,
-    ThumbsUp, ThumbsDown, RotateCcw, Sparkles,
+    Bot, Send, Paperclip, Mic, MicOff, Volume2, VolumeX,
+    ThumbsUp, ThumbsDown, Sparkles,
     Brain, AlertTriangle, Heart, Activity, Plus, Clock, Trash2, MessageSquare,
 } from 'lucide-react';
 import { useAppStore } from '../../store/useAppStore';
@@ -186,13 +186,13 @@ function makeNewSession(name?: string): ChatSession {
 const useSpeechRecognition = (lang: Language, onAutoSend: (text: string) => void) => {
     const [listening, setListening] = useState(false);
     const [transcript, setTranscript] = useState('');
-    const recRef = useRef<SpeechRecognition | null>(null);
+    const recRef = useRef<any>(null);
     const finalRef = useRef('');
     const onAutoSendRef = useRef(onAutoSend);
     useEffect(() => { onAutoSendRef.current = onAutoSend; }, [onAutoSend]);
 
     const API = typeof window !== 'undefined'
-        ? ((window as unknown as Record<string, unknown>).SpeechRecognition as typeof SpeechRecognition || (window as unknown as Record<string, unknown>).webkitSpeechRecognition as typeof SpeechRecognition)
+        ? ((window as any).SpeechRecognition || (window as any).webkitSpeechRecognition)
         : null;
 
     const supported = Boolean(API);
@@ -204,10 +204,10 @@ const useSpeechRecognition = (lang: Language, onAutoSend: (text: string) => void
         rec.interimResults = true;
         rec.lang = LANG_CODE[lang];
         finalRef.current = '';
-        rec.onresult = (e: SpeechRecognitionEvent) => {
+        rec.onresult = (e: any) => {
             let interim = '';
             let final = '';
-            for (const result of Array.from(e.results) as SpeechRecognitionResult[]) {
+            for (const result of Array.from(e.results) as any[]) {
                 if (result.isFinal) final += result[0].transcript;
                 else interim += result[0].transcript;
             }
@@ -1083,7 +1083,7 @@ As a medical AI, I can provide general health education on a wide range of topic
 
                 {/* Messages */}
                 <div className="card" style={{ flex: 1, overflowY: 'auto', padding: '20px 18px 12px', display: 'flex', flexDirection: 'column', gap: 12 }}>
-                    {messages.map((msg, idx) => (
+                    {messages.map((msg) => (
                         <div key={msg.id} className={msg.role === 'user' ? 'animate-msg-right' : 'animate-msg-left'} style={{ display: 'flex', gap: 10, justifyContent: msg.role === 'user' ? 'flex-end' : 'flex-start' }}>
 
                             {msg.role === 'ai' && (

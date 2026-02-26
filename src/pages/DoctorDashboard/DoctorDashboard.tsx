@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Stethoscope, Brain, FileText, AlertTriangle, TrendingUp, Users, RefreshCw } from 'lucide-react';
+import { Stethoscope, Brain, FileText, AlertTriangle, TrendingUp, RefreshCw } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const PATIENTS = [

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
     FlaskConical, Upload, FileText, Download, ChevronDown, ChevronUp,
     Search, TrendingUp, TrendingDown, Minus, Plus, Trash2,
-    ShoppingCart, X, CheckCircle, Package, TestTube,
+    ShoppingCart, X, CheckCircle, TestTube,
 } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, LineChart, Line, ReferenceLine } from 'recharts';
 import toast from 'react-hot-toast';
@@ -474,8 +474,8 @@ const LabTests: React.FC = () => {
                             <ResponsiveContainer width="100%" height={240}>
                                 <LineChart data={trendData} margin={{ left: -20 }}>
                                     <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                                    <XAxis dataKey="month" tick={{ fontSize: 11, fill: '#64748b' } as React.CSSProperties} axisLine={false} tickLine={false} />
-                                    <YAxis tick={{ fontSize: 11, fill: '#64748b' } as React.CSSProperties} axisLine={false} tickLine={false} />
+                                    <XAxis dataKey="month" tick={{ fontSize: 11, fill: '#64748b' } as any} axisLine={false} tickLine={false} />
+                                    <YAxis tick={{ fontSize: 11, fill: '#64748b' } as any} axisLine={false} tickLine={false} />
                                     <Tooltip contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 10, fontSize: 12 }} />
                                     <Line type="monotone" dataKey={trendMetric} stroke="#6366f1" strokeWidth={2.5} dot={{ r: 5, fill: '#6366f1', strokeWidth: 0 }} activeDot={{ r: 7 }} />
                                     {trendMetric === 'Hemoglobin' && <ReferenceLine y={12} stroke="#f59e0b" strokeDasharray="4 4" label={{ value: 'Min Normal', fill: '#f59e0b', fontSize: 10 }} />}
@@ -489,8 +489,8 @@ const LabTests: React.FC = () => {
                             <ResponsiveContainer width="100%" height={180}>
                                 <BarChart data={trendData} margin={{ left: -20 }}>
                                     <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                                    <XAxis dataKey="month" tick={{ fontSize: 11, fill: '#64748b' } as React.CSSProperties} axisLine={false} tickLine={false} />
-                                    <YAxis tick={{ fontSize: 11, fill: '#64748b' } as React.CSSProperties} axisLine={false} tickLine={false} />
+                                    <XAxis dataKey="month" tick={{ fontSize: 11, fill: '#64748b' } as any} axisLine={false} tickLine={false} />
+                                    <YAxis tick={{ fontSize: 11, fill: '#64748b' } as any} axisLine={false} tickLine={false} />
                                     <Tooltip contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 10, fontSize: 12 }} />
                                     <Bar dataKey="Hemoglobin" fill="#6366f1" radius={[4, 4, 0, 0]} />
                                 </BarChart>

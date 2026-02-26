@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Brain, RefreshCw, MessageCircle, ChevronRight, CheckCircle } from 'lucide-react';
+import { Search, Brain, RefreshCw, MessageCircle, ChevronRight } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 interface OpinionResult {
@@ -20,7 +20,7 @@ const SecondOpinion: React.FC = () => {
     const [form, setForm] = useState({ diagnosis: '', symptoms: '', age: '', labs: '', history: '' });
     const [result, setResult] = useState<OpinionResult | null>(null);
     const [loading, setLoading] = useState(false);
-    const [followUp, setFollowUp] = useState('');
+
     const [chat, setChat] = useState<{ role: 'user' | 'ai'; text: string }[]>([]);
     const [chatInput, setChatInput] = useState('');
     const [chatLoading, setChatLoading] = useState(false);

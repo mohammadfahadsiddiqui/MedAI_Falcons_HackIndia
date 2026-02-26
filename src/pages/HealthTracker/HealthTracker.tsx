@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-    Plus, Moon, Droplets, Flame, Activity, Heart, Trash2, Edit3, TrendingUp, Scale
+    Plus, Moon, Droplets, Flame, Trash2, Scale
 } from 'lucide-react';
 import {
-    BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, LineChart, Line
+    XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, LineChart, Line
 } from 'recharts';
 import toast from 'react-hot-toast';
 import { format } from 'date-fns';
