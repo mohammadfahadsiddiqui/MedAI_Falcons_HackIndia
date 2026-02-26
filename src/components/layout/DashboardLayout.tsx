@@ -17,6 +17,16 @@ const pageVariants = {
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
     const { isDark } = useAppStore();
 
+    // Apply theme to <html> so sidebar (position:fixed) and toast portals also inherit
+    React.useEffect(() => {
+        const el = document.documentElement;
+        if (isDark) {
+            el.classList.remove('light');
+        } else {
+            el.classList.add('light');
+        }
+    }, [isDark]);
+
     return (
         <div className={isDark ? '' : 'light'} style={{ minHeight: '100vh' }}>
             <div className="app-layout">

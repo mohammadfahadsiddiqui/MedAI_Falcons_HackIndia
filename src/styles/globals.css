@@ -63,21 +63,26 @@
 }
 
 .light {
-    --bg-base: #f0f4ff;
+    --bg-base: #f8f9fb;
     --bg-surface: #ffffff;
     --bg-card: #ffffff;
-    --bg-card-hover: #f8faff;
+    --bg-card-hover: #f1f5f9;
     --bg-input: #f1f5f9;
     --bg-sidebar: #ffffff;
     --text-primary: #0f172a;
     --text-secondary: #334155;
     --text-muted: #64748b;
-    --border: rgba(0, 0, 0, 0.08);
+    --border: rgba(0, 0, 0, 0.09);
     --border-active: rgba(99, 102, 241, 0.4);
-    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-bg: rgba(255, 255, 255, 0.8);
     --glass-border: rgba(99, 102, 241, 0.15);
-    --shadow-md: 0 4px 20px rgba(99, 102, 241, 0.1);
-    --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.15);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 20px rgba(99, 102, 241, 0.08);
+    --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.12);
+
+    /* Explicitly set color so all children inherit dark text (not body's white) */
+    color: #0f172a;
+    background: #f8f9fb;
 }
 
 /* Badge — light mode readable colors */
